@@ -192,9 +192,9 @@
           (if (some #(= cell %) (-> @appstate :board :blocked))
               (col_to_rgb :darkslategray)
               (case (get (-> @appstate :board :costs) cell)
-                5 (col_to_rgb :mediumblue)
-                3 (col_to_rgb :darkgreen)
-                2 (col_to_rgb :darkseagreen)
+                10 (col_to_rgb :mediumblue)
+                5 (col_to_rgb :darkgreen)
+                3 (col_to_rgb :darkseagreen)
                 (col_to_rgb :gainsboro)))))
     
     (.beginPath ctx)
