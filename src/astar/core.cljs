@@ -14,8 +14,9 @@
   (let [path_fn grids/astar] ;breadth_first breadth_first_early greedy_breadth_first uniform_cost astar
     (path_fn orig goal (:board @appstate))))
 
+(prn (maps/loadmap maps/terrain2))
                 
-(swap! appstate assoc :board maps/map1  ;terrainmap map1 blockedmap
+(swap! appstate assoc :board (maps/loadmap maps/terrain2)  ;terrainmap map1 blockedmap
                       :paths nil
                       :path_home nil)
 (swap! appstate assoc :orig (-> @appstate :board :start))
